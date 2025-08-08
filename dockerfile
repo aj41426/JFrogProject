@@ -3,7 +3,7 @@ FROM ubuntu:latest
 RUN apt-get update 
 RUN apt-get install -y apache2
 
-COPY ./web/index.html /var/www/html/index.html 
+# COPY ./web/index.html /var/www/html/index.html 
 
 EXPOSE 80
 
