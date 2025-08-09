@@ -21,7 +21,7 @@ jobs:
             password: ${{ secrets.DOCKER_PASSWORD }}
 
         - name: Build Docker image
-          run: docker build -t jfrog:latest .
+          run: docker build -t ${{ secrets.DOCKER_USER}}/jfalvy:latest .
 
         - name: Push Docker image
-          run: docker push jfrog:latest
+          run: docker push ${{ secrets.DOCKER_USER}}/jfalvy:latest
